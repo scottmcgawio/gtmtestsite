@@ -1,0 +1,12 @@
+{
+    "filter": {
+        "title": "Don't Send Event if User ID is null",
+        "if": "type = 'identify' and (typeof( userId ) != 'string' or length( userId ) < 1)",
+        "actions": [
+                {
+                    "type": "drop_event"
+                }
+        ],
+        "enabled": true
+        }
+}
